@@ -1,34 +1,138 @@
 :root {
     --base-ipad: 40px;
     --base-pad: 20px;
+    --card-padding: 20px;
+    --card-radius: 12px;
+
+    --t-time: 0.2s;
+
+    --gunmetal: #252D2C;
+    --outer-space: #404E4D;
+    --paynesgrey: #646881;
+    --wenge: #63595C;
+    --verdigris: #62BEC1;
+    --vividskyblue: #5AD2F4;
+    --antiflashwhite: #F3F4F6;
+    --platinum: #DCDDE4;
+    --frenchgrey: #BABCCA;
+
+    --outer-space-filter: brightness(0) saturate(100%) invert(30%) sepia(9%) saturate(553%) hue-rotate(127deg) brightness(94%) contrast(97%);
+    --antiflashwhite-filter: brightness(0) saturate(100%) invert(100%) sepia(16%) saturate(657%) hue-rotate(177deg) brightness(100%) contrast(94%);
+
+    --sidebarbg: var(--vividskyblue);
+    --sidebarfgcolor: var(--outer-space);
+    --mainpanelbg: var(--frenchgrey);
+    --cardbg: var(--antiflashwhite);
+    --headerbg: var(--wenge);
+    --fgcolordark: var(--outer-space);
+    --fgcolorlessdark: var(--paynesgrey);
+    --fgcolorlighttext: var(--antiflashwhite);
+    --bgaccent: var(--verdigris);
+
 }
+
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+
+    background-color: var(--outer-space);
+    color: var(--antiflashwhite);
+
+    box-shadow: 2px 2px 3px var(--outer-space);
+
+    border-radius: 16px;
+    padding: 10px;
+    width: 100px;
+}
+
+button:hover {
+    background-color: var(--sidebarbg);
+    box-shadow: 2px 2px 10px var(--outer-space);
+
+    transition: box-shadow 1s ease;
+}
+
+hr.solid {
+    padding: none;
+    width: 100%;
+    border-top: 1px solid var(--fgcolordark);
+}
+
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     height: 100vh;
 }
 
-
 .sidebar {
-    background-color: skyblue;
     grid-column: 1 / 2;
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    background-color: var(--sidebarbg);
 }
+
+.sidebar,
+.sidebar a,
+.sidebar a:visited {
+    color: var(--sidebarfgcolor);
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-link:hover {
+    position: relative;
+    left: 10px;
+}
+
+.sidebar-link:hover .sidebar-text {
+    color: var(--antiflashwhite);
+    transition: color var(--t-time) ease;
+}
+
+.sidebar-text {
+    padding-left: 10px;
+}
+
+.sidebar-icon {
+    filter: var(--outer-space-filter);
+}
+
+.sidebar-link:hover .sidebar-icon {
+    filter: var(--antiflashwhite-filter);
+    transition: filter var(--t-time) ease;
+}
+
+
 
 .sidebar>ul>li {
-    font-size: 1.5rem;
-    padding-inline: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1.5ch;
+    padding-inline: 30px;
 }
-
 
 .sidebar-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
     display: flex;
-    padding: 20px;
+    padding: 30px;
     gap: 10px;
+    align-items: center;
 }
+
 
 .placeholder-product-icon {
     height: 20px;
@@ -36,15 +140,22 @@
     font-size: 2rem;
 }
 
-.sidebar-heading>h2 {
-    font-size: 2rem;
-}
-
 .main-panel {
     grid-column: 2 / 3;
     display: grid;
     grid-template: 1fr 1fr 8fr / 2fr 1fr;
+    background-color: var(--mainpanelbg);
 }
+
+.searchbar,
+.header {
+    background-color: var(--cardbg);
+}
+
+.header {
+    box-shadow: 0 6px 6px -6px var(--paynesgrey);
+}
+
 
 .searchbar {
     grid-row: 1 / 2;
@@ -58,7 +169,15 @@
 }
 
 .searchbar>input {
+    box-sizing: border-box;
     width: 50vw;
+    background-color: var(--mainpanelbg);
+    outline: none;
+    border: none;
+    padding-block: 0.75ch;
+    padding-inline: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 3px var(--outer-space);
 }
 
 .searchbar>#bell {
@@ -70,6 +189,7 @@
     grid-column: 1 / -1;
 
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding-inline: var(--base-ipad);
 }
@@ -77,23 +197,30 @@
 .button-controls {
     display: flex;
     margin-left: auto;
-    gap: 10px;
+    gap: 20px;
 }
 
 
 .user-greeting {
     position: relative;
+    top: 8px;
+    padding-left: 10px;
+}
+
+.username,
+.user-greeting {
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .user-greeting::before {
     content: "Hello There,";
     position: absolute;
     font-size: 0.7rem;
-    top: -12px;
+    top: -16px;
 }
 
 .projects {
-    background-color: grey;
     grid-row: 3 / 4;
     grid-column: 1 / 2;
     padding: 15px;
@@ -109,15 +236,22 @@
     grid-column: 1 / -1;
 }
 
+
+.section-header {
+    font-size: 1.1rem;
+}
+
 .card {
-    background-color: white;
+    background: linear-gradient(to right, var(--verdigris) 10px, var(--cardbg) 10px);
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: var(--card-padding);
 }
 
 .card>h3 {
+    color: var(--fgcolordark);
     font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .card>div {
@@ -127,15 +261,12 @@
     gap: 10px;
 }
 
-.card>div>div {
-    width: 30px;
-    height: 30px;
+.card>div>a>img {
+    filter: var(--outer-space-filter);
+}
 
-    border-radius: 50%;
-    background-color: red;
-
-    text-align: center;
-    align-content: center;
+.card>p {
+    color: var(--fgcolorlessdark);
 }
 
 .info-panel {
@@ -144,16 +275,62 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
-    background-color: grey;
     gap: 15px;
 }
 
-.announcements {
-    flex: 1;
-    background-color: white;
+
+.card,
+.announcements,
+.trending {
+    border-radius: var(--card-radius);
+    box-shadow: 2px 2px 4px var(--paynesgrey);
 }
 
+
+.announcements,
 .trending {
     flex: 1;
-    background-color: white;
+    font-size: 0.7rem;
+    background-color: var(--cardbg);
+    padding: var(--card-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcement h3 {
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    color: var(--fgcolordark);
+}
+
+.announcement p {
+    color: var(--fgcolorlessdark);
+}
+
+.placeholder-profile-pic {
+    background-color: var(--verdigris);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.bio-card {
+    display: flex;
+    align-items: center;
+}
+
+.bio-card-content {
+    margin-left: 10px;
+    color: var(--fgcolorlessdark);
+}
+
+.bio-username {
+    color: var(--fgcolordark);
+    font-weight: 600;
+    margin-bottom: 5px;
 }

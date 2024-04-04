@@ -13,31 +13,62 @@
     <div class="container">
         <div class="sidebar">
             <div class="sidebar-heading">
-                <div class="placeholder-product-icon">X</div>
+                <img src="assets/logo.svg" class="sidebar-icon" height="50px" width="50px"
+                    alt="A very nice, original logo" />
                 <h2>Dashboard</h2>
             </div>
             <ul class="menu">
-                <li class="menu-entry"><a href="">Home</a></li>
-                <li class="menu-entry"><a href="">Profile</a></li>
-                <li class="menu-entry"><a href="">Messages</a></li>
-                <li class="menu-entry"><a href="">History</a></li>
-                <li class="menu-entry"><a href="">Tasks</a></li>
-                <li class="menu-entry"><a href="">Communities</a></li>
+                <li class="menu-entry">
+                    <a class="sidebar-link" href=""><img class="sidebar-icon" src="assets/home.svg" height="30px"
+                            width="30px" /><span class="sidebar-text">Home</span></a>
+                </li>
+                <li class="menu-entry">
+                    <a class="sidebar-link" href=""><img class="sidebar-icon" src="assets/profile.svg" height="30px"
+                            width="30px" /><span class="sidebar-text">Profile</span></a>
+                </li>
+                <li class="menu-entry">
+                    <a class="sidebar-link" href=""><img class="sidebar-icon" src="assets/messages.svg" height="30px"
+                            width="30px" /><span class="sidebar-text">Messages</span></a>
+                </li>
+                <li class="menu-entry">
+                    <a class="sidebar-link" href=""><img class="sidebar-icon" src="assets/history.svg" height="30px"
+                            width="30px" /><span class="sidebar-text">History</span></a>
+                </li>
+                <li class="menu-entry">
+                    <a class="sidebar-link" href=""><img class="sidebar-icon" src="assets/tasks.svg" height="30px"
+                            width="30px" /><span class="sidebar-text">Tasks</span></a>
+                </li>
+                <li class="menu-entry">
+                    <a class="sidebar-link" href=""><img class="sidebar-icon" src="assets/community.svg" height="30px"
+                            width="30px" /><span class="sidebar-text">Communities</span></a>
+                </li>
             </ul>
             <ul class="settings-menu">
-                <li class="menu-entry"><a href="">Settings</a></li>
-                <li class="menu-entry"><a href="">Support</a></li>
-                <li class="menu-entry"><a href="">Privacy</a></li>
+                <li class="menu-entry">
+                    <a class="sidebar-link" href=""><img class="sidebar-icon" src="assets/cog.svg" height="30px"
+                            width="30px" /><span class="sidebar-text">Settings</span></a>
+                </li>
+                <li class="menu-entry">
+                    <a class="sidebar-link" href=""><img class="sidebar-icon" src="assets/help.svg" height="30px"
+                            width="30px" /><span class="sidebar-text">Support</span></a>
+                </li>
+                <li class="menu-entry">
+                    <a class="sidebar-link" href=""><img class="sidebar-icon" src="assets/privacy.svg" height="30px"
+                            width="30px" /><span class="sidebar-text">Privacy</span></a>
+                </li>
             </ul>
         </div>
         <div class="main-panel">
             <div class="searchbar">
+                <img src="assets/magnify.svg" class="sidebar-icon" width="25px" height="25px" />
                 <input name="search" type="search" value="" placeholder="Search" />
-                <div id="bell">Bell</div>
-                <div class="profile-pic" id="upper-pfp">Bell</div>
+
+                <a id="bell" href=""><img src="assets/bell.svg" class="sidebar-icon" width="25px" height="25px" /></a>
+                <div class="placeholder-profile-pic">Pic</div>
                 <div class="username">Fake Guy</div>
             </div>
             <div class="header">
+                <div class="placeholder-profile-pic">Pic</div>
                 <div class="user-greeting">Fake Guy (@fakeguy)</div>
                 <div class="button-controls">
                     <button type="button">New</button>
@@ -46,7 +77,7 @@
                 </div>
             </div>
             <div class="projects">
-                <h2 class="projects-heading">Projects</h2>
+                <h2 class="section-header projects-heading">Projects</h2>
                 <div class="card">
                     <h3 class="card-header">Cool Project</h3>
                     <p class="card-body">
@@ -54,9 +85,9 @@
                         sint cillum sint consectetur cupidatat.
                     </p>
                     <div class="card-controls">
-                        <div class="placeholder" id="favorite">F</div>
-                        <div class="placeholder" id="hide">H</div>
-                        <div class="placeholder" id="share">S</div>
+                        <a href=""><img src="assets/like.svg" height="25px" width="25px" /></a>
+                        <a href=""><img src="assets/hide.svg" height="25px" width="25px" /></a>
+                        <a href=""><img src="assets/share.svg" height="25px" width="25px" /></a>
                     </div>
                 </div>
                 <div class="card">
@@ -66,9 +97,9 @@
                         sint cillum sint consectetur cupidatat.
                     </p>
                     <div class="card-controls">
-                        <div class="placeholder" id="favorite">F</div>
-                        <div class="placeholder" id="hide">H</div>
-                        <div class="placeholder" id="share">S</div>
+                        <a href=""><img src="assets/like.svg" height="25px" width="25px" /></a>
+                        <a href=""><img src="assets/hide.svg" height="25px" width="25px" /></a>
+                        <a href=""><img src="assets/share.svg" height="25px" width="25px" /></a>
                     </div>
                 </div>
                 <div class="card">
@@ -78,9 +109,9 @@
                         sint cillum sint consectetur cupidatat.
                     </p>
                     <div class="card-controls">
-                        <div class="placeholder" id="favorite">F</div>
-                        <div class="placeholder" id="hide">H</div>
-                        <div class="placeholder" id="share">S</div>
+                        <a href=""><img src="assets/like.svg" height="25px" width="25px" /></a>
+                        <a href=""><img src="assets/hide.svg" height="25px" width="25px" /></a>
+                        <a href=""><img src="assets/share.svg" height="25px" width="25px" /></a>
                     </div>
                 </div>
                 <div class="card">
@@ -90,9 +121,9 @@
                         sint cillum sint consectetur cupidatat.
                     </p>
                     <div class="card-controls">
-                        <div class="placeholder" id="favorite">F</div>
-                        <div class="placeholder" id="hide">H</div>
-                        <div class="placeholder" id="share">S</div>
+                        <a href=""><img src="assets/like.svg" height="25px" width="25px" /></a>
+                        <a href=""><img src="assets/hide.svg" height="25px" width="25px" /></a>
+                        <a href=""><img src="assets/share.svg" height="25px" width="25px" /></a>
                     </div>
                 </div>
                 <div class="card">
@@ -102,9 +133,9 @@
                         sint cillum sint consectetur cupidatat.
                     </p>
                     <div class="card-controls">
-                        <div class="placeholder" id="favorite">F</div>
-                        <div class="placeholder" id="hide">H</div>
-                        <div class="placeholder" id="share">S</div>
+                        <a href=""><img src="assets/like.svg" height="25px" width="25px" /></a>
+                        <a href=""><img src="assets/hide.svg" height="25px" width="25px" /></a>
+                        <a href=""><img src="assets/share.svg" height="25px" width="25px" /></a>
                     </div>
                 </div>
                 <div class="card">
@@ -114,14 +145,14 @@
                         sint cillum sint consectetur cupidatat.
                     </p>
                     <div class="card-controls">
-                        <div class="placeholder" id="favorite">F</div>
-                        <div class="placeholder" id="hide">H</div>
-                        <div class="placeholder" id="share">S</div>
+                        <a href=""><img src="assets/like.svg" height="25px" width="25px" /></a>
+                        <a href=""><img src="assets/hide.svg" height="25px" width="25px" /></a>
+                        <a href=""><img src="assets/share.svg" height="25px" width="25px" /></a>
                     </div>
                 </div>
             </div>
             <div class="info-panel">
-                <h2 class="announcements-heading">Announcements</h2>
+                <h2 class="section-header announcements-heading">Announcements</h2>
                 <div class="announcements">
                     <div class="announcement">
                         <h3>Announcement 1</h3>
@@ -130,6 +161,7 @@
                             sint cillum sint consectetur cupidatat.
                         </p>
                     </div>
+                    <hr class="solid" />
                     <div class="announcement">
                         <h3>Announcement 2</h3>
                         <p>
@@ -137,6 +169,7 @@
                             sint cillum sint consectetur cupidatat.
                         </p>
                     </div>
+                    <hr class="solid" />
                     <div class="announcement">
                         <h3>Announcement 3</h3>
                         <p>
@@ -145,27 +178,35 @@
                         </p>
                     </div>
                 </div>
-                <h2 class="trending-heading">Trending</h2>
+                <h2 class="section-header trending-heading">Trending</h2>
                 <div class="trending">
                     <div class="bio-card">
                         <div class="placeholder-profile-pic">Pic</div>
-                        <div class="bio-username">@broski</div>
-                        <div class="bio-tagline">Building Better Worlds</div>
+                        <div class="bio-card-content">
+                            <div class="bio-username">@broski</div>
+                            <div class="bio-tagline">Building Better Worlds</div>
+                        </div>
                     </div>
                     <div class="bio-card">
                         <div class="placeholder-profile-pic">Pic</div>
-                        <div class="bio-username">@broski</div>
-                        <div class="bio-tagline">Building Better Worlds</div>
+                        <div class="bio-card-content">
+                            <div class="bio-username">@broski</div>
+                            <div class="bio-tagline">Building Better Worlds</div>
+                        </div>
                     </div>
                     <div class="bio-card">
                         <div class="placeholder-profile-pic">Pic</div>
-                        <div class="bio-username">@broski</div>
-                        <div class="bio-tagline">Building Better Worlds</div>
+                        <div class="bio-card-content">
+                            <div class="bio-username">@broski</div>
+                            <div class="bio-tagline">Building Better Worlds</div>
+                        </div>
                     </div>
                     <div class="bio-card">
                         <div class="placeholder-profile-pic">Pic</div>
-                        <div class="bio-username">@broski</div>
-                        <div class="bio-tagline">Building Better Worlds</div>
+                        <div class="bio-card-content">
+                            <div class="bio-username">@broski</div>
+                            <div class="bio-tagline">Building Better Worlds</div>
+                        </div>
                     </div>
                 </div>
             </div>
